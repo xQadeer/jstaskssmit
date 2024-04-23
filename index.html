@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button> <a href="index1.html"> index1</a></button>
+    <button> <a href="index2.html">index2</a></button>
+</body>
+<script>
+    function findMissingNumber(arr) {
+    // Sort the array to ensure sequential order
+    arr.sort((a, b) => a - b);
+
+    // Check for the missing number
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== i + 1) {
+            return i + 1;
+        }
+    }
+
+    // If no missing number found, return -1
+    return -1;
+}
+
+// Example usage
+const numbers = [1, 2, 4, 5, 6];
+const missingNumber = findMissingNumber(numbers);
+if (missingNumber !== -1) {
+    console.log("Missing number:", missingNumber);
+} else {
+    console.log("No missing number found.");
+}
+
+</script>
+</html>
